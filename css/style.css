@@ -6,7 +6,7 @@
 
 body {
   font-family: "PT Sans", sans-serif;
-  background-color: #000000;
+  background-color: #1040B0; /*#000000;*/
   text-align: center;
 }
 
@@ -36,7 +36,6 @@ div {
 }
 
 .page {
-  display: flex;
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -44,38 +43,62 @@ div {
 }
 
 .intro-picture {
-  flex: 4;
+  flex: 6;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: #EFEFF4; /*#C8F0FF;*/
 }
 
 .intro-content {
-  flex: 6;
+  flex: 4;
   display: flex;
   justify-content: flex-start;
   background-color: #1040B0;
   box-shadow: -2px 0px 5px 0px #1040B0;
 }
 
-.header {
-  background-color: #FFFFFF;
-  height: 20px;
-}
-
 .picture-container {
   padding: 25px;
   align-self: center;
   text-align: center;
-  width: 400px;
 }
 
 .content-container {
-  padding: 50px;
+  padding: 20px 50px;
   align-self: center;
   text-align: left;
-  width: 600px;
   color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+  .page {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .intro-picture {
+    flex: 4;
+    justify-content: flex-end;
+  }
+
+  .intro-content {
+    flex: 6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .picture-container {
+    width: 400px;
+  }
+
+  .content-container {
+    width: 600px;
+  }
+}
+
+.header {
+  background-color: #FFFFFF;
+  height: 20px;
 }
 
 .link-container {
